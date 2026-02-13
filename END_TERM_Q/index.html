@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #ffffff;
+            background: linear-gradient(45deg,#d2f96f94,#1f1f1f86,#0E100A);
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: linear-gradient(to right, rgba(231, 225, 225, 0.991) 1px, transparent 1px), linear-gradient(to bottom, rgba(218, 216, 216, 0.888) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #D2F96F;
+            margin-bottom: 20px;
+        }
+
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            border: 2px solid #D2F96F;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #part01, #part02 {
+            flex: 1 1 300px;
+        }
+
+        #part01 img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            display: block;
+            margin-top: 5px;
+            padding: 5px;
+        }
+
+        .rating-area {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .star {
+            font-size: 30px;
+            cursor: pointer;
+            color: #444;
+        }
+
+        .star:hover {
+            color: #D2F96F;
+            transform: scale(1.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background-color: #D2F96F;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+
+    <h1>FEEDBACK | FORM</h1>
+
+    <div id="container">
+        <div id="part01">
+            <img src="https://i.pinimg.com/736x/72/fc/8e/72fc8e74dd242efd85e110f255d75ceb.jpg" alt="Feedback">
+        </div>
+
+        <div id="part02">
+            <ul>
+                <li>NAME <input type="text"></li>
+                <li>EMAIL <input type="text"></li>
+                
+                <li>
+                    GIVE RATINGS
+                    <div class="rating-area">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </li>
+
+                <li>COMMENTS <input type="text"></li>
+
+                <li>REQUIRED FIELDS <input type="text"></li>
+            </ul>
+            <button class="submit-btn">SUBMIT</button>
+        </div>
+    </div>
+
+</body>
+</html>
